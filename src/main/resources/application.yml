@@ -11,15 +11,12 @@ logging:
 ---
 
 spring:
-  profiles: local
+  profiles: dev
 
 server:
   port: 8080
 
----
+game:
+  karaoke:
+    max_players: 5
 
-spring:
-  profiles: local2
-
-server:
-  port: 8081

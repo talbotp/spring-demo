@@ -7,6 +7,8 @@ else
   MAVEN=./mvnw.cmd
 endif
 
+quick:
+	${MAVEN} spring-boot:run
 
 clean:
 	@rm -rf ${LOG_DIR}
@@ -16,7 +18,5 @@ build: clean
 	@${MAVEN} install
 
 run:
-	${JAVA} -jar target/demo-0.0.1-SNAPSHOT.jar --spring.profiles.active=local
+	${JAVA} -jar target/demo-0.0.1-SNAPSHOT.jar --spring.profiles.active=dev
 
-run2:
-	${JAVA} -jar target/demo-0.0.1-SNAPSHOT.jar --spring.profiles.active=local2
