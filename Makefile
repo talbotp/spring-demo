@@ -7,7 +7,7 @@ else
   MAVEN=./mvnw.cmd
 endif
 
-quick:
+dev:
 	${MAVEN} spring-boot:run
 
 clean:

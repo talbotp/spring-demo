@@ -10,6 +10,7 @@ public class User {
   private final long id = idCounter.getAndIncrement();
   private String hostname;
   private long score;
+  private long gameId;
 
   public User(String name) {
     this.name = name;
@@ -23,8 +24,7 @@ public class User {
     if (!(other instanceof User))
       return false;
 
-    User otherUser = (User) other;
-    return name.equals(otherUser.name);
+    return name.equals(((User) other).name);
   }
 
   public String getName() {
@@ -49,6 +49,10 @@ public class User {
 
   public void setHostname(String hostname) {
     this.hostname = hostname;
+  }
+
+  public long getGameId() {
+    return gameId;
   }
 
 }
